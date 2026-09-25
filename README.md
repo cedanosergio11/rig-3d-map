@@ -1,13 +1,18 @@
 # Rig 3D Map
 
-Static Vite + React + Three.js pad map for a Stasis MPD site.
+Static Vite + React + Three.js pad map.
 
 ## Data
 
-- `public/pins.json` — MPGenie-gated pins + schematic returns path (`paths[]`).
+- `public/pins.json` — pins and the schematic returns path.
 - Positions are layout stubs, not surveyed iron.
-- UI must show path caveat: *Schematic flow path — not surveyed from the flyover.*
+- The amber banner stays on screen: Schematic flow path — not surveyed from the flyover.
 
-## Stack
+## Run
 
-Vite / React / Three.js OrbitControls. GitHub Pages. No API.
+```bash
+npm install
+npm run dev
+```
+
+GitHub Pages base path is `/rig-3d-map/`. No API.

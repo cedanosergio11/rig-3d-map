@@ -1,0 +1,149 @@
+:root {
+  color: #1c1915;
+  background: #f4f1ea;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+}
+
+button, h1, p { margin: 0; }
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 12px 16px;
+  background: #f7f4ee;
+  border-bottom: 1px solid #ddd4c6;
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b6258;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 650;
+}
+
+.caveat {
+  max-width: 28rem;
+  padding: 8px 10px;
+  background: #fff4e5;
+  border: 1px solid #e2b15a;
+  color: #6a4108;
+  font-size: 14px;
+}
+
+.stage {
+  position: relative;
+  min-height: 420px;
+  background: #d7e3ea;
+}
+
+.stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  position: absolute;
+  z-index: 2;
+  left: 12px;
+  top: 12px;
+  max-width: min(32rem, calc(100% - 24px));
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #ddd4c6;
+}
+
+.banner.is-error {
+  background: #fff1f0;
+  border-color: #e2a8a2;
+  color: #7a241c;
+}
+
+.dock {
+  display: grid;
+  gap: 10px;
+  padding: 12px 16px 16px;
+  background: #f7f4ee;
+  border-top: 1px solid #ddd4c6;
+}
+
+.pin-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pin-btn {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 1px solid #d5cdc0;
+  background: #fff;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pin-btn strong { display: block; font-size: 15px; }
+.pin-btn small { color: #6b6258; text-transform: capitalize; }
+
+.pin-btn.is-selected,
+.pin-label.is-selected {
+  outline: 2px solid #1c1915;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9a3412;
+}
+
+.dot.is-approved { background: #1f6b4a; }
+.dot.is-unverified { background: #b86e00; }
+
+.detail-title { font-weight: 650; margin-bottom: 4px; }
+
+.paths {
+  margin: 0;
+  padding-left: 18px;
+  color: #3f382f;
+}
+
+.pin-label {
+  border: 2px solid #1f6b4a;
+  background: rgba(255, 255, 255, 0.94);
+  color: #1c1915;
+  padding: 4px 8px;
+  font: 600 13px/1.2 "Segoe UI", Helvetica, Arial, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .top { flex-direction: column; }
+  .stage { min-height: 62vh; }
+}
