@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "units": "scene-meters",
+  "originNote": "Pad origin under derrick center. Positions are layout stubs for Cate to align to the pad mesh — not surveyed.",
+  "pins": [
+    {
+      "id": "wellhead_rcd_zone",
+      "label": "Wellhead / RCD zone",
+      "status": "unverified",
+      "position": [0, 0.5, 0],
+      "note": "Bowl unverified from flyover; schematic path start only."
+    },
+    {
+      "id": "manifold",
+      "label": "MPD manifold trailer",
+      "status": "approved",
+      "position": [18, 0.5, 8],
+      "note": "Sergio-identified: site-east of substructure, ~4 o'clock from derrick, between white tank and pink pipe racks. Not gooseneck."
+    },
+    {
+      "id": "shakers_flowline",
+      "label": "Shakers + standard flowline",
+      "status": "approved",
+      "position": [28, 0.5, -6],
+      "note": "MGS + shakers as one end zone until a separate MGS pin is marked."
+    }
+  ],
+  "paths": [
+    {
+      "id": "mpd_returns_schematic",
+      "kind": "schematic",
+      "label": "RCD \u2192 MPD manifold \u2192 MGS + shakers",
+      "via": ["wellhead_rcd_zone", "manifold", "shakers_flowline"],
+      "status": "approved",
+      "caveat": "Schematic flow path — not surveyed from the flyover.",
+      "note": "Annulus returns path, not drill-string inlet."
+    }
+  ]
+}
