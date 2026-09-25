@@ -26,11 +26,11 @@ jobs:
             }
             return value;
           };
-          fs.writeFileSync(file, JSON.stringify(strip(data), null, 2) + '\\n');
+          fs.writeFileSync(file, JSON.stringify(strip(data), null, 2) + String.fromCharCode(10));
           NODE
       - run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add package-lock.json
-          git diff --cached --quiet || git commit -m "Normalize lockfile to local source"
+          git diff --cached --quiet || git commit -m "Preserve lockfile final newline"
           git push origin HEAD:main
